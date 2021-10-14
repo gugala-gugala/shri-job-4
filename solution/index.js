@@ -4,7 +4,7 @@ module.exports = function (Homework) {
         return new Promise(function(resolve, reject){ callback(...args, resolve)});
     }
 
-    return (array, fn, initialValue, cb) => {
+    return async (array, fn, initialValue, cb) => {
         let result = initialValue;
 
         while (true) {
@@ -17,7 +17,7 @@ module.exports = function (Homework) {
                 break;
             }
         }
-        
+
         cb(result);
     }
 }
