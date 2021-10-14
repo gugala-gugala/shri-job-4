@@ -9,7 +9,7 @@ module.exports = function (Homework) {
 
         while (true) {
             let arrayLength = await promisify(array.length);
-            let stop = await promisify(equal, arrayLength, 0);
+            let stop = await promisify(Homework.equal, arrayLength, 0);
             if (!stop) {
                 let popVal = await promisify(array.pop);
                 result = await promisify(fn, result, popVal, 0, array);
